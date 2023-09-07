@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Chat App</string>
+    <string name="hint_email">Enter Email <font color='#FF0000'>*</font></string>
+    <string name="hint_password">Enter Password <font color='#FF0000'>*</font></string>
+</resources>

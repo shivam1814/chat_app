@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="margin5">5dp</dimen>
+    <dimen name="margin10">10dp</dimen>
+    <dimen name="margin15">15dp</dimen>
+    <dimen name="margin30">30dp</dimen>
+
+    <dimen name="height100">100dp</dimen>
+    <dimen name="width100">100dp</dimen>
+
+    <dimen name="height70">70dp</dimen>
+    <dimen name="width70">70dp</dimen>
+
+    <dimen name="height30">30dp</dimen>
+    <dimen name="width30">30dp</dimen>
+
+    <dimen name="height40">40dp</dimen>
+    <dimen name="width40">40dp</dimen>
+
+    <dimen name="height50">50dp</dimen>
+    <dimen name="width50">50dp</dimen>
+
+    <dimen name="height20">20dp</dimen>
+    <dimen name="width20">20dp</dimen>
+
+    <dimen name="height25">25dp</dimen>
+    <dimen name="width25">25dp</dimen>
+
+    <dimen name="height80">80dp</dimen>
+    <dimen name="width80">80dp</dimen>
+
+    <dimen name="txt_20">20sp</dimen>
+    <dimen name="txt_25">20sp</dimen>
+    <dimen name="txt_30">20sp</dimen>
+    <dimen name="txt_18">18sp</dimen>
+    <dimen name="txt_16">16sp</dimen>
+    <dimen name="txt_14">14sp</dimen>
+
+</resources>

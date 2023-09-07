@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin10"
+    app:cardCornerRadius="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#15171C"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/mainChatsProfile_Uimage"
+                android:layout_width="@dimen/width80"
+                android:layout_height="@dimen/height80"
+                android:layout_margin="@dimen/margin10"
+                android:padding="5dp"
+                android:src="@drawable/sample" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin10"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/mainChatsProfile_Uname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Robert David"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_18"
+                        android:textStyle="bold"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/downarrow"
+                        app:tint="@color/white"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="@dimen/margin5"
+                        android:id="@+id/dropUpDownIcon"/>
+
+                </RelativeLayout>
+
+<!--                unread chats layout-->
+                <LinearLayout
+                    android:id="@+id/unreadChatsLlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/UnreadChatsNumber"
+                        android:layout_width="@dimen/width25"
+                        android:layout_height="@dimen/height25"
+                        android:background="@drawable/unread_chat_background"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_14"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:text="Unread Chats"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_16" />
+
+                </LinearLayout>
+
+<!--                last seen layout-->
+                <LinearLayout
+                    android:id="@+id/lastSeenLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Was online at 10:45 AM"
+                        android:textColor="#97FFFFFF"
+                        android:textSize="@dimen/txt_16"
+                        android:textStyle="italic" />
+
+                </LinearLayout>
+
+<!--                online layout-->
+                <LinearLayout
+                    android:id="@+id/onlineLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:background="@drawable/online_circle"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:text="Online"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/txt_16" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/hiddenCardView">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_margin="@dimen/margin10"
+                app:cardCornerRadius="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#20232B">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/margin10"
+                        android:layout_marginBottom="@dimen/margin10"
+                        android:layout_toStartOf="@id/btnSend"
+                        app:cardCornerRadius="@dimen/margin10"
+                        android:backgroundTint="#15171C">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@null"
+                            android:inputType="text|textNoSuggestions"
+                            android:hint="Start chating..."
+                            android:textColorHint="@color/hintColor"
+                            android:layout_marginLeft="@dimen/margin10"
+                            android:textColor="@color/white"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin10"
+                        app:cardCornerRadius="@dimen/margin10"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:id="@+id/btnSend">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="#F2FC89"
+                            android:src="@drawable/send"
+                            android:padding="10dp"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin10"
+                android:layout_marginEnd="@dimen/margin15"
+                android:layout_marginBottom="@dimen/margin10"
+                android:gravity="end"
+                android:text="Open Mesages"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_16" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
