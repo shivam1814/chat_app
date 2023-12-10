@@ -7,57 +7,80 @@
 
     </data>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".LoginActivity"
         android:background="#20232B"
-        android:gravity="center"
-        android:orientation="vertical">
+        tools:context=".LoginActivity">
 
 
         <TextView
+            android:id="@+id/txtLogIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Log In"
+            android:text="@string/log_in"
             android:textAllCaps="true"
-            android:textSize="@dimen/txt_30"
             android:textColor="@color/white"
-            android:textStyle="bold" />
+            android:textSize="@dimen/txt_30"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/userEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"/>
 
         <EditText
-            android:layout_width="match_parent"
+            android:id="@+id/userEmail"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin10"
             android:background="@drawable/main_top_background"
             android:hint="@string/hint_email"
-            android:textColorHint="@color/hintColor"
-            android:layout_margin="@dimen/margin10"
+            android:inputType="text"
+            android:maxLines="1"
             android:padding="15dp"
-            android:id="@+id/userEmail"
             android:textColor="@color/white"
-            android:textSize="@dimen/txt_18" />
+            android:textColorHint="@color/hintColor"
+            android:textSize="@dimen/txt_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtLogIn"
+            tools:ignore="TextFields"
+            app:layout_constraintBottom_toTopOf="@id/userPassword"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:autofillHints="emailAddress" />
 
         <EditText
-            android:layout_width="match_parent"
+            android:id="@+id/userPassword"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin10"
             android:background="@drawable/main_top_background"
             android:hint="@string/hint_password"
-            android:textColorHint="@color/hintColor"
-            android:layout_margin="@dimen/margin10"
+            android:inputType="textPassword"
             android:padding="15dp"
-            android:id="@+id/userPassword"
             android:textColor="@color/white"
+            android:textColorHint="@color/hintColor"
             android:textSize="@dimen/txt_18"
-            android:inputType="textPassword"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userEmail"
+            app:layout_constraintBottom_toTopOf="@id/btnLogIn"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:autofillHints="password" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/btn_background"
             android:layout_marginTop="@dimen/margin15"
-            android:text="log in"
+            android:background="@drawable/btn_background"
+            android:text="@string/log_in"
             android:textColor="@color/white"
-            android:id="@+id/btnLogIn" />
+            app:layout_constraintTop_toBottomOf="@id/userPassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -11,13 +11,13 @@ import java.util.regex.Pattern
 
 class LoginActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityLoginBinding
+    private lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_login)
 
-        binding.userEmail.setOnFocusChangeListener { v, hasFocus ->
+        binding.userEmail.setOnFocusChangeListener { _, hasFocus ->
             if (hasFocus) {
                 binding.userEmail.setTextColor(getColor(R.color.white))
             }
@@ -36,6 +36,7 @@ class LoginActivity : AppCompatActivity() {
             } else {
                 if(!isValidEmail(binding.userEmail.text.toString())){
                     Toast.makeText(this, "enter valid email id", Toast.LENGTH_SHORT).show()
+                    binding.userEmail.setTextColor(getColor(R.color.red))
                 }else{
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
@@ -48,4 +49,6 @@ class LoginActivity : AppCompatActivity() {
         val pattern: Pattern = Patterns.EMAIL_ADDRESS
         return pattern.matcher(email).matches()
     }
+
+
 }

@@ -1,5 +1,6 @@
 package com.example.chatapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
@@ -38,6 +39,10 @@ class MainActivity : AppCompatActivity() {
         list.add(mainChats("Patel Kiran", R.drawable.sample, 0, true))
         list.add(mainChats("Kamal Shah", R.drawable.sample, 35, true))
         list.add(mainChats("Patel Kiran", R.drawable.sample, 0, false))
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
     }
 
 }
